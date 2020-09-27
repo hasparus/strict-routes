@@ -1,0 +1,24 @@
+{
+  "name": "strict-routes",
+  "version": "1.0.0-rc.0",
+  "description": "zero-cost strictly typed routing in TypeScript",
+  "main": "dist/index.js",
+  "repository": "git@github.com:hasparus/strict-routes.git",
+  "contributors": [
+    "beerose <ola.zxcvbnm@gmail>",
+    "hasparus <hasparus@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-node test/index.test.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^4.1.0-beta"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "typescript": "^4.1.0-beta"
+  }
+}
