@@ -40,10 +40,15 @@ export namespace StrictRoutes {
     ? true 
     : false;
 
+  type StripParamTypes<R extends string> =
+    R extends `${infer Start}/{${infer Param}}${infer Rest}`
+    ? `${Start}/{${GetParamName<Param>}}${StripParamTypes<Rest>}`
+    : R;
+
   export type RouteWithValues<R extends string> = {
     [P in keyof ExtractRouteParams<R> | 'path']:
       P extends 'path'
-        ? R
+        ? StripParamTypes<R>
         : P extends keyof ExtractRouteParams<R>
         ? ExtractRouteParams<R>[P]
         : never
@@ -52,7 +57,7 @@ export namespace StrictRoutes {
   export type RoutesWithValues<Rs extends string> = {
     [R in Rs]: HasParams<R> extends true
       ? RouteWithValues<R>
-      : R | { path: R }
+      : StripParamTypes<R> | { path: StripParamTypes<R> }
   }[Rs]
 }
 

@@ -27,7 +27,7 @@ navigate("posts/{postId}");
 // @ts-expect-error
 navigate({ path: "posts/{postId}" });
 navigate({
-  path: "posts/{postId:number}/{commentId:string}",
+  path: "posts/{postId}/{commentId}",
   postId: 20,
   // @ts-expect-error
   commentId: 10,
@@ -38,7 +38,7 @@ navigate({
 navigate("/");
 navigate({ path: "posts/{postId}", postId: "34" }); // string | number
 navigate({
-  path: "posts/{postId:number}/{commentId:string}",
+  path: "posts/{postId}/{commentId}",
   postId: 20,
   commentId: "abcd",
 });
