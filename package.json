@@ -1,6 +1,6 @@
 {
   "name": "strict-routes",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "zero-cost strictly typed routing in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
