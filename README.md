@@ -1,5 +1,7 @@
-# strict-routes
+<h1 align="center">strict-routes</h1>
 <p align="center"><em>zero-cost strictly typed routing in TypeScript</em></p>
+
+---
 
 Have you ever broken a link in your app with a stupid typo or by overlooking? No more.
 
