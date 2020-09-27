@@ -17,7 +17,7 @@
   "scripts": {
     "build": "tsc",
     "test": "ts-node test/index.test.ts",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build && yarn test"
   },
   "peerDependencies": {
     "typescript": "^4.1.0-beta"
