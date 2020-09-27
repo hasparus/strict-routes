@@ -16,10 +16,16 @@ type Routes =
   | 'posts/{postId:number}/{commentId:string}'
 
 const { navigate } = strictRoutes<Routes>()({
-  navigate: 
+  navigate: (route) => console.log(route)
 })
 
+navigate('/');
 navigate({ path: 'posts/{postId}', postId: 1 });
+navigate({
+  path: "posts/{postId}/{commentId}",
+  postId: 20,
+  commentId: "abcd",
+});
 ```
 
 ### Installation
