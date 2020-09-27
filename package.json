@@ -3,6 +3,7 @@
   "version": "1.0.0-rc.0",
   "description": "zero-cost strictly typed routing in TypeScript",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:hasparus/strict-routes.git",
   "contributors": [
     "beerose <ola.zxcvbnm@gmail>",
